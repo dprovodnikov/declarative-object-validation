@@ -1,5 +1,7 @@
 # Declarative object validation
 
+[![Build Status](https://travis-ci.org/dprovodnikov/declarative-object-validation.svg?branch=master)](https://travis-ci.org/dprovodnikov/declarative-object-validation)
+
 ## Install
 
 ```bash
