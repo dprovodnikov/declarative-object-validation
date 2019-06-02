@@ -43,6 +43,7 @@ const rules = {
 ```
 
 The library provides a couple of basic rules that are fairly common:
+
 | Rule | Description |
 |:----:|:-----------:|
 | notEmpty | Makes sure the given value is not empty |
