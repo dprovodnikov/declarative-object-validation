@@ -2,7 +2,7 @@
   "name": "@dprovodnikov/validation",
   "version": "1.0.0",
   "description": "Declarative validation library for javascript objects.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "dependencies": {
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
