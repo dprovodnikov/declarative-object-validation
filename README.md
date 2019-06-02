@@ -99,7 +99,8 @@ const form = {
   field: '',
 };
 
-const report = validate(form); // { field: 'Field should not be empty' }
+validate('all', form); // { field: 'Field should not be empty' }
+validate('field', form); // 'Field should not be empty'
 ```
 
 The output of the validator is a structure where keys are field names and values are error messages.
