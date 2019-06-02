@@ -21,12 +21,24 @@ describe('applyRules  validation util function', () => {
   });
 
   test('returned function uses applied rule properly', () => {
-    const validate = () => 'Validation message';
+    const rule = () => 'Error message';
 
     const rules = {
-      field: [validate],
+      field: [rule],
     };
 
-    expect(applyRules(rules)('field', { field: 'value' })).toBe('Validation message');
+    expect(applyRules(rules)('field', { field: 'value' })).toBe('Error message');
+  });
+
+  test('throws an error if the fieldName arg is not a string', () => {
+    const rule = () => 'Error message';
+
+    const rules = {
+      field: [rule],
+    };
+
+    const validate = applyRules(rules);
+
+    expect(() => validate(null, { field: 'value' })).toThrowError();
   });
 });

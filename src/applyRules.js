@@ -1,8 +1,10 @@
 import validate from './validate';
 import validateAll from './validateAll';
 
+const isString = value => typeof value === 'string';
+
 const applyRules = rules => (fieldName, object, options = {}) => {
-  if (!fieldName) {
+  if (!isString(fieldName) || !fieldName) {
     throw Error('Missing validation key. What do you want to validate?');
   }
 
