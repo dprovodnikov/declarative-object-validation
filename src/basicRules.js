@@ -49,8 +49,8 @@ export const hasUpperLetter = message => (value) => {
   return '';
 };
 
-export const notShorterThan = (length, message) => (value) => {
-  if (!value || value.length < length) {
+export const shorterThan = (length, message) => (value) => {
+  if (!value || value.length >= length) {
     return message;
   }
 

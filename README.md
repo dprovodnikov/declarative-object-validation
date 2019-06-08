@@ -54,7 +54,7 @@ The library provides a couple of basic rules that are fairly common:
 | matches | Makes sure the given value matches the specified field of the form |
 | emailFormat | Makes sure the given value matches the regexp (integrated in the lib) |
 | urlFormat | Makes sure the given value matches the regexp (integrated in the lib) |
-| notShorterThan | Makes sure the given value has length of at least equal the specified value |
+| shorterThan | Makes sure the given value is shorter than the specified value |
 
 If you need any other rule you can easily implement one using simple api. Here's what a rule looks like:
 
