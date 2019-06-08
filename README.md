@@ -53,6 +53,7 @@ The library provides a couple of basic rules that are fairly common:
 | longerThen | Makes sure the given value has a length of more than specified |
 | matches | Makes sure the given value matches the specified field of the form |
 | emailFormat | Makes sure the given value matches the regexp that is integrated in the library |
+| notShorterThan | Makes sure the given value has length of at least equal the specified value |
 
 If you need any other rule you can easily implement one using simple api. Here's what a rule looks like:
 
