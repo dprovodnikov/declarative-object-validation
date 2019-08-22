@@ -1,4 +1,4 @@
-import { URL } from 'url';
+import { Url } from 'url';
 
 const EMAIL_REG_EXP = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -12,7 +12,7 @@ export const emailFormat = message => (email) => {
 
 export const urlFormat = message => (value) => {
   try { 
-    new URL(value);
+    new Url(value);
   } catch (err) {
     return message;
   }
