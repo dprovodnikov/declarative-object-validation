@@ -12,7 +12,7 @@ export const emailFormat = message => (email) => {
 
 export const urlFormat = message => (value) => {
   try { 
-    new URL(url);
+    new URL(value);
   } catch (err) {
     return message;
   }
