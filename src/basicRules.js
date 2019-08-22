@@ -1,5 +1,6 @@
+import { URL } from 'url';
+
 const EMAIL_REG_EXP = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const URL_REG_EXP = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
 
 export const emailFormat = message => (email) => {
   if (!EMAIL_REG_EXP.test(email)) {
@@ -10,7 +11,9 @@ export const emailFormat = message => (email) => {
 };
 
 export const urlFormat = message => (value) => {
-  if (!URL_REG_EXP.test(value)) {
+  try { 
+    new URL(url);
+  } catch (err) {
     return message;
   }
 
